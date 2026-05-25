@@ -1,12 +1,13 @@
 import { useLang } from "@/lib/language";
+import logo from "@/assets/goosheno-logo.png";
 
 export function Navbar() {
   const { lang, setLang, t } = useLang();
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-background/70 border-b border-border/40">
       <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between gap-4">
-        <a href="#top" className="flex items-center gap-2">
-          <span className="text-2xl text-gold" style={{ fontFamily: "var(--font-serif)" }}>❦</span>
+        <a href="#top" className="flex items-center gap-3">
+          <img src={logo} alt="Goosheno logo" className="h-10 w-10 rounded-md object-contain" />
           <span className="text-xl font-semibold text-gold tracking-wide" style={{ fontFamily: "var(--font-serif)" }}>
             {lang === "fa" ? "گوشنو" : "Goosheno"}
           </span>
