@@ -51,7 +51,7 @@ const translations = {
 const LangContext = createContext<Ctx | null>(null);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Lang>("en");
+  const [lang, setLang] = useState<Lang>("fa");
   const dir = lang === "fa" ? "rtl" : "ltr";
 
   useEffect(() => {
