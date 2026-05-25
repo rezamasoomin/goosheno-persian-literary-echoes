@@ -1,4 +1,10 @@
 import { useLang } from "@/lib/language";
+import logo from "@/assets/goosheno-logo.png";
+
+// Spotify episode ID for the first/intro episode — embedded as the default player.
+// Replace with the real ID of "قسمت اول لیلی و مجنون" once known.
+const FIRST_EPISODE_ID = "07iDPWsprSZTrVf71mWdG2";
+
 
 export function Hero() {
   const { lang, t } = useLang();
@@ -12,7 +18,7 @@ export function Hero() {
         }}
       />
       <div className="relative mx-auto max-w-5xl text-center">
-        <div className="text-gold/60 text-3xl mb-6" style={{ fontFamily: "var(--font-serif)" }}>❦</div>
+        <img src={logo} alt="Goosheno" className="mx-auto mb-6 h-24 w-24 md:h-28 md:w-28 rounded-xl object-contain shadow-gold" />
         <h1 className="text-6xl md:text-8xl text-gold mb-4 tracking-tight" style={{ fontFamily: "var(--font-serif)" }}>
           {lang === "fa" ? "گوشنو" : "Goosheno"}
         </h1>
@@ -27,8 +33,8 @@ export function Hero() {
         </p>
         <div className="max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-gold border border-gold/20">
           <iframe
-            title="Goosheno on Spotify"
-            src="https://open.spotify.com/embed/show/5GfO62XP7wIEeetNNxl2tC?utm_source=generator&theme=0"
+            title="Goosheno — first episode"
+            src={`https://open.spotify.com/embed/episode/${FIRST_EPISODE_ID}?utm_source=generator&theme=0`}
             width="100%"
             height="352"
             frameBorder={0}
