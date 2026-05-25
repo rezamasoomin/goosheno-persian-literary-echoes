@@ -1,4 +1,10 @@
 import { useLang } from "@/lib/language";
+import logo from "@/assets/goosheno-logo.png";
+
+// Spotify episode ID for the first/intro episode — embedded as the default player.
+// Replace with the real ID of "قسمت اول لیلی و مجنون" once known.
+const FIRST_EPISODE_ID = "07iDPWsprSZTrVf71mWdG2";
+
 
 export function Hero() {
   const { lang, t } = useLang();
