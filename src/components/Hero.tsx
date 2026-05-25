@@ -33,8 +33,8 @@ export function Hero() {
         </p>
         <div className="max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-gold border border-gold/20">
           <iframe
-            title="Goosheno on Spotify"
-            src="https://open.spotify.com/embed/show/5GfO62XP7wIEeetNNxl2tC?utm_source=generator&theme=0"
+            title="Goosheno — first episode"
+            src={`https://open.spotify.com/embed/episode/${FIRST_EPISODE_ID}?utm_source=generator&theme=0`}
             width="100%"
             height="352"
             frameBorder={0}
