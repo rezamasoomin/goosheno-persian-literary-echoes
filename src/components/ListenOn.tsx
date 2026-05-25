@@ -1,29 +1,57 @@
-import { useLang } from "@/lib/language";
+import { useLang } from "../lib/LanguageContext";
 
 const platforms = [
-  { name: "Spotify", url: "https://open.spotify.com/show/5GfO62XP7wIEeetNNxl2tC" },
-  { name: "Apple Podcasts", url: "https://podcasts.apple.com/" },
-  { name: "Podbean", url: "https://www.podbean.com/" },
-  { name: "Castbox", url: "https://castbox.fm/" },
+  {
+    name: "Spotify",
+    url: "https://open.spotify.com/show/5GfO62XP7wIEeetNNxl2tC",
+    color: "#1DB954",
+    icon: "🎵",
+  },
+  {
+    name: "Apple Podcasts",
+    url: "https://podcasts.apple.com/us/podcast/goosheno-%D9%BE%D8%A7%D8%AF%DA%A9%D8%B3%D8%AA-%D8%A7%D8%AF%D8%A8%DB%8C-%DA%AF%D9%88%D8%B4%D9%86%D9%88/id1505116534",
+    color: "#fc3c44",
+    icon: "🎙️",
+  },
+  {
+    name: "Podbean",
+    url: "https://www.podbean.com/podcast-detail/aefwg-f52d7/Goosheno",
+    color: "#f47b20",
+    icon: "🎧",
+  },
+  {
+    name: "Castbox",
+    url: "https://castbox.fm/ch/2717720",
+    color: "#f0a500",
+    icon: "📻",
+  },
 ];
 
-export function ListenOn() {
+export default function ListenOn() {
   const { t } = useLang();
+
   return (
-    <section id="listen" className="py-24 px-6 border-y border-border/40 bg-card/30">
-      <div className="mx-auto max-w-4xl text-center">
-        <h2 className="text-4xl md:text-5xl text-gold mb-4 ornament inline-block">{t("listen.title")}</h2>
-        <p className="text-muted-foreground mb-12">{t("listen.desc")}</p>
-        <div className="flex flex-wrap justify-center gap-4">
+    <section id="listen" className="bg-[#080808] py-24 px-4">
+      <div className="max-w-3xl mx-auto text-center">
+        <h2 className="text-3xl font-bold text-amber-400 mb-8">
+          {t("Listen On", "گوش بده در")}
+        </h2>
+
+        <div className="w-16 h-px bg-amber-600/50 mx-auto mb-12" />
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {platforms.map((p) => (
             <a
               key={p.name}
               href={p.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 rounded-full border border-gold/40 text-cream hover:bg-gradient-gold hover:text-primary-foreground hover:border-transparent transition-all shadow-elegant"
+              className="flex flex-col items-center gap-3 p-6 rounded-xl border border-amber-900/30 bg-amber-900/10 hover:bg-amber-900/20 hover:border-amber-600/50 transition-all group"
             >
-              {p.name}
+              <span className="text-3xl">{p.icon}</span>
+              <span className="text-amber-100/70 text-sm group-hover:text-amber-400 transition-colors">
+                {p.name}
+              </span>
             </a>
           ))}
         </div>

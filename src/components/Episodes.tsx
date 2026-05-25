@@ -1,68 +1,52 @@
-import { useLang } from "@/lib/language";
+import { useLang } from "../lib/LanguageContext";
+import { episodes } from "../data/episodes";
 
-const SHOW_ID = "5GfO62XP7wIEeetNNxl2tC";
+export default function Episodes() {
+  const { t } = useLang();
 
-// Featured episodes — Spotify episode IDs (placeholder examples; user can replace)
-const episodes = [
-  {
-    id: "show",
-    titleEn: "Layla and Majnun — The Desert Lovers",
-    titleFa: "لیلی و مجنون — عاشقان صحرا",
-    descEn: "The eternal tale of devotion that crossed deserts and centuries.",
-    descFa: "حکایت جاودانهٔ دلدادگی که از صحراها و قرن‌ها گذشت.",
-  },
-  {
-    id: "show",
-    titleEn: "Shahnameh — The Book of Kings",
-    titleFa: "شاهنامه — کتاب شاهان",
-    descEn: "Ferdowsi's epic, told one hero at a time.",
-    descFa: "حماسهٔ فردوسی، روایتی پهلوان به پهلوان.",
-  },
-  {
-    id: "show",
-    titleEn: "Khosrow and Shirin — A Royal Romance",
-    titleFa: "خسرو و شیرین — عشق پادشاهانه",
-    descEn: "Nezami's tender chronicle of love, loss, and longing.",
-    descFa: "روایت لطیف نظامی از عشق، فقدان و اشتیاق.",
-  },
-];
-
-export function Episodes() {
-  const { lang, t } = useLang();
   return (
-    <section id="episodes" className="py-24 px-6">
-      <div className="mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl text-gold mb-4 ornament inline-block">
-            {t("episodes.title")}
-          </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">{t("episodes.desc")}</p>
-        </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {episodes.map((ep, i) => (
-            <article
-              key={i}
-              className="bg-card/60 border border-border rounded-xl p-6 shadow-elegant backdrop-blur-sm hover:border-gold/50 transition-all group"
+    <section id="episodes" className="bg-[#0d0d12] py-24 px-4">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold text-amber-400 mb-8 text-center">
+          {t("Episodes", "قسمت‌ها")}
+        </h2>
+
+        <div className="w-16 h-px bg-amber-600/50 mx-auto mb-12" />
+
+        <div className="flex flex-col gap-8">
+          {episodes.map((ep) => (
+            <div
+              key={ep.id}
+              className="border border-amber-900/30 bg-amber-900/10 rounded-xl p-6 hover:border-amber-600/40 transition-all"
             >
-              <div className="mb-4">
-                <h3 className="text-xl text-cream mb-2 group-hover:text-gold transition-colors" style={{ fontFamily: "var(--font-serif)" }}>
-                  {lang === "fa" ? ep.titleFa : ep.titleEn}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {lang === "fa" ? ep.descFa : ep.descEn}
-                </p>
+              <div className="flex items-start justify-between mb-3">
+                <div>
+                  <h3 className="text-amber-300 font-semibold text-lg">
+                    {t(ep.titleEn, ep.titleFa)}
+                  </h3>
+                  <p className="text-amber-100/40 text-sm mt-1">
+                    {ep.date}
+                  </p>
+                </div>
+                <span className="text-amber-600/50 text-sm font-mono">
+                  #{ep.id}
+                </span>
               </div>
+
+              <p className="text-amber-100/60 text-sm leading-relaxed mb-4">
+                {t(ep.descriptionEn, ep.descriptionFa)}
+              </p>
+
               <iframe
-                title={ep.titleEn}
-                src={`https://open.spotify.com/embed/show/${SHOW_ID}?utm_source=generator&theme=0`}
+                src={`https://open.spotify.com/embed/show/${ep.spotifyId}?utm_source=generator&theme=0`}
                 width="100%"
                 height="152"
-                frameBorder={0}
+                frameBorder="0"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"
                 className="rounded-lg"
               />
-            </article>
+            </div>
           ))}
         </div>
       </div>

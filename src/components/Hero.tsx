@@ -1,46 +1,56 @@
-import { useLang } from "@/lib/language";
-import logo from "@/assets/goosheno-logo.png";
+import { useLang } from "../lib/LanguageContext";
 
-// Spotify episode ID for the first/intro episode — embedded as the default player.
-const FIRST_EPISODE_ID = "0DMmc3nC88IUUYgJrGPZma";
+export default function Hero() {
+  const { t } = useLang();
 
-
-export function Hero() {
-  const { lang, t } = useLang();
   return (
-    <section id="top" className="relative pt-20 pb-24 px-6 overflow-hidden">
-      <div
-        className="absolute inset-0 opacity-20 pointer-events-none"
+    <section className="min-h-screen flex flex-col items-center justify-center bg-[#0a0a0f] px-4 pt-20 relative overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_#2a1a0a_0%,_#0a0a0f_70%)] pointer-events-none" />
+
+      {/* Stars effect */}
+      <div className="absolute inset-0 opacity-30"
         style={{
-          backgroundImage:
-            "radial-gradient(circle at 20% 30%, oklch(0.74 0.13 85 / 30%) 0%, transparent 50%), radial-gradient(circle at 80% 70%, oklch(0.78 0.15 70 / 25%) 0%, transparent 50%)",
+          backgroundImage: "radial-gradient(1px 1px at 20% 30%, #c9a84c 0%, transparent 100%), radial-gradient(1px 1px at 80% 10%, #c9a84c 0%, transparent 100%), radial-gradient(1px 1px at 50% 60%, #c9a84c 0%, transparent 100%), radial-gradient(1px 1px at 10% 80%, #c9a84c 0%, transparent 100%), radial-gradient(1px 1px at 90% 70%, #c9a84c 0%, transparent 100%)",
         }}
       />
-      <div className="relative mx-auto max-w-5xl text-center">
-        <img src={logo} alt="Goosheno" className="mx-auto mb-6 h-24 w-24 md:h-28 md:w-28 rounded-xl object-contain shadow-gold" />
-        <h1 className="text-6xl md:text-8xl text-gold mb-4 tracking-tight" style={{ fontFamily: "var(--font-serif)" }}>
-          {lang === "fa" ? "گوشنو" : "Goosheno"}
+
+      <div className="relative z-10 text-center max-w-3xl mx-auto">
+        <p className="text-amber-500/60 text-sm tracking-[0.3em] uppercase mb-4">
+          {t("Persian Literary Podcast", "پادکست ادبی فارسی")}
+        </p>
+
+        <h1 className="text-7xl font-bold text-amber-400 mb-2 tracking-wide">
+          {t("Goosheno", "گوشنو")}
         </h1>
-        <div className="text-xl md:text-2xl text-cream/80 mb-2" style={{ fontFamily: "var(--font-serif)", fontStyle: "italic" }}>
-          {lang === "fa" ? "Goosheno" : "گوشنو"}
-        </div>
-        <p className="text-base md:text-lg text-gold/80 mt-6 mb-4 uppercase tracking-[0.3em]">
-          {t("hero.subtitle")}
+
+        <p className="text-amber-100/40 text-lg mb-2">گوشنو</p>
+
+        <p className="text-amber-100/60 text-lg mt-6 leading-relaxed max-w-xl mx-auto">
+          {t(
+            "Retelling classic Persian literary treasures in simple, accessible language.",
+            "بازگویی گنج‌های ادبی کلاسیک فارسی به زبانی ساده و روان"
+          )}
         </p>
-        <p className="max-w-2xl mx-auto text-muted-foreground text-lg leading-relaxed mb-12">
-          {t("hero.desc")}
-        </p>
-        <div className="max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-gold border border-gold/20">
+
+        <div className="mt-10">
           <iframe
-            title="Goosheno — first episode"
-            src={`https://open.spotify.com/embed/episode/${FIRST_EPISODE_ID}?utm_source=generator&theme=0`}
+            src="https://open.spotify.com/embed/show/5GfO62XP7wIEeetNNxl2tC?utm_source=generator&theme=0"
             width="100%"
-            height="352"
-            frameBorder={0}
+            height="152"
+            frameBorder="0"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
+            className="rounded-xl max-w-xl mx-auto"
           />
         </div>
+
+        <a
+          href="#episodes"
+          className="inline-block mt-8 px-8 py-3 bg-amber-600/20 border border-amber-600/50 text-amber-400 rounded-full hover:bg-amber-600/30 transition-colors"
+        >
+          {t("Browse Episodes", "مشاهده قسمت‌ها")}
+        </a>
       </div>
     </section>
   );
