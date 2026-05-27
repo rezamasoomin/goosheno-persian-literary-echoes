@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Episodes from "./components/Episodes";
 import About from "./components/About";
 import ListenOn from "./components/ListenOn";
+import Comments from "./components/Comments";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         <Navbar />
         <Hero />
         <Episodes />
+        <Comments />
         <About />
         <ListenOn />
         <footer className="bg-[#080808] border-t border-amber-900/30 py-8 text-center text-amber-100/30 text-sm">

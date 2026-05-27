@@ -21,9 +21,14 @@ const platforms = [
   },
   {
     name: "Castbox",
-    url: "https://castbox.fm/ch/2717720",
+    url: "https://castbox.fm/channel/Goosheno-%D9%BE%D8%A7%D8%AF%DA%A9%D8%B3%D8%AA-%D8%A7%D8%AF%D8%A8%DB%8C-%DA%AF%D9%88%D8%B4%D9%86%D9%88-id2717720?country=us",
     color: "#f0a500",
     icon: "📻",
+  },
+  {
+    name: "Telegram",
+    url: "https://t.me/gooshenoyyd",
+    icon: "✈️",
   },
 ];
 
@@ -39,7 +44,7 @@ export default function ListenOn() {
 
         <div className="w-16 h-px bg-amber-600/50 mx-auto mb-12" />
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-5">
           {platforms.map((p) => (
             <a
               key={p.name}

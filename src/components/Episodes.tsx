@@ -10,7 +10,7 @@ export default function Episodes() {
     <section id="episodes" className="bg-[#0d0d12] py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold text-amber-400 mb-8 text-center">
-          {t("Episodes", "قسمت‌ها")}
+          {t("Episodes", "قسمت‌ها: گنج اول لیلی و مجنون")}
         </h2>
 
         <div className="w-16 h-px bg-amber-600/50 mx-auto mb-12" />
