@@ -176,7 +176,7 @@ export const episodes = [
     titleEn: "Episode 18 / Layla and Majnun Meet",
     descriptionFa: "لیلی با کمک قاصد قراری گذاشت تا مجنون را ببیند. لیلی جلوتر از ده قدم نرفت چون شوهر داشت. مجنون از دور برایش غزل خواند و هر دو با چشمانی گریان جدا شدند.",
     descriptionEn: "Layla arranges to meet Majnun. She won't go closer than ten steps because she is married. He recites a ghazal from afar; both are intoxicated by each other's presence and part in tears.",
-    spotifyId: "2jTWfxhNjkm55WA6VhtyXE",
+    spotifyId: "74nYzLgZeLjfZ2YPUaMm4W",
     date: "2020-05-01",
   },
   {
@@ -185,7 +185,7 @@ export const episodes = [
     titleEn: "Episode 19 / Zayd, Zaynab, and Their Aid",
     descriptionFa: "از جوانی به نام زید گفتیم که مثل مجنون عاشق دخترعمویش بود اما به او نرسید. زید رابط بین لیلی و مجنون شد و تمام غزل‌های مجنون را برای لیلی می‌برد.",
     descriptionEn: "We meet Zayd, who like Majnun loved his cousin but never reached her. He becomes the messenger between Layla and Majnun, carrying all of Majnun's ghazals to Layla.",
-    spotifyId: "7t1Djvzmv5BCkVVaJv9ay3",
+    spotifyId: "2XowhIhw9W6hT47CxaeBiS",
     date: "2020-05-08",
   },
   {
@@ -194,7 +194,7 @@ export const episodes = [
     titleEn: "Episode 20 / Death of Layla's Husband",
     descriptionFa: "ابن‌سلام بیمار شد و از دنیا رفت. لیلی که طبق رسم عرب باید دو سال در خانه می‌ماند، برای فراغ مجنون با صدای بلند گریه کرد.",
     descriptionEn: "Ibn Salam falls ill and dies. Layla must remain home for two years by custom. She weeps loudly — outwardly for her husband, but truly for the longing of Majnun.",
-    spotifyId: "4ukZe4wEK0UaLTFOO57mtW",
+    spotifyId: "6laWcbMrl0FH4Ksbiysfpw",
     date: "2020-05-16",
   },
   {
@@ -203,7 +203,7 @@ export const episodes = [
     titleEn: "Episode 21 / Layla's Prayer to God",
     descriptionFa: "در دو سال تنهایی، کار لیلی فقط دعا و زاری در درگاه خدا بود. از تاریکی شب گله می‌کرد و از خدا می‌خواست که قبل از مرگش یک بار دیگر مجنون را به او برساند.",
     descriptionEn: "During her two years of solitude, Layla spends her days in prayer. She complains of the darkness of night and begs God to let her see Majnun once more before she dies.",
-    spotifyId: "6nSP1bGj0cv2aJ20DTQOkz",
+    spotifyId: "07EaqPsU2CrNONUb6AUtuY",
     date: "2020-05-22",
   },
   {
@@ -212,7 +212,7 @@ export const episodes = [
     titleEn: "Behind the Voice of Layla and Majnun",
     descriptionFa: "پشت صدای لیلی و مجنون — گفتگویی درباره‌ی این پادکست و چگونگی شکل‌گیری آن.",
     descriptionEn: "A behind-the-scenes conversation about the Goosheno podcast and how it came together.",
-    spotifyId: "5bY6eZ5N0kZMdIeIFECS8f",
+    spotifyId: "0bVqjPwIVrGXlalXNWDARz",
     date: "2020-06-03",
   },
   {
@@ -221,7 +221,7 @@ export const episodes = [
     titleEn: "Episode 22 / Layla and Majnun Finally Meet",
     descriptionFa: "بالاخره زید مجنون را نزد لیلی آورد. آن‌ها در خیمه همدیگر را در آغوش گرفتند اما مجنون نتوانست حضور فیزیکی لیلی را تحمل کند و دوباره به بیابان فرار کرد.",
     descriptionEn: "Zayd finally brings Majnun to Layla. They embrace in the tent — but Majnun, having reached true love, cannot bear the physical reality and flees back to the desert.",
-    spotifyId: "7FMxNVSz3WxPlI0B0JWY82",
+    spotifyId: "3JyNCeLAIN3D0AV58aoxq8",
     date: "2020-06-05",
   },
   {
@@ -230,7 +230,7 @@ export const episodes = [
     titleEn: "Episode 23 / Autumn and the Death of Layla",
     descriptionFa: "بعد از آن دیدار، لیلی بیمار شد و حس کرد مرگش نزدیک است. به مادرش وصیت کرد که او را مثل عروس آرایش کند و به مجنون بگوید تا آخر با یاد او جان داد.",
     descriptionEn: "After their meeting Layla falls ill. She tells her mother to dress her like a bride when she dies, and to tell Majnun she lived and died thinking of him.",
-    spotifyId: "6739Kt2j9wUlxBrQng0AQ3",
+    spotifyId: "6fGKzscX2LQty5XZFEdX9V",
     date: "2020-06-12",
   },
   {
@@ -239,7 +239,7 @@ export const episodes = [
     titleEn: "Episode 24 / Majnun Learns of Layla's Death",
     descriptionFa: "زید با لباس سیاه نزد مجنون رفت و خبر فوت لیلی را داد. مجنون بی‌هوش شد و وقتی به هوش آمد، کشان‌کشان خود را به مزار لیلی رساند و آنقدر گریست که از خاک مزار او گل لاله رویید.",
     descriptionEn: "Zayd arrives in black and tells Majnun of Layla's death. Majnun faints; when he wakes he crawls to her grave and weeps until tulips bloom from the soil of her tomb.",
-    spotifyId: "5sMX8ERQvIkRlietjAMbqG",
+    spotifyId: "29O3pvRAfx4mBdJZxUSR4e",
     date: "2020-07-10",
   },
   {
@@ -248,7 +248,7 @@ export const episodes = [
     titleEn: "Episode 25 / Final / Majnun Dies on Layla's Grave",
     descriptionFa: "مجنون سر بر خاک لیلی گذاشت، دعا کرد که به او ملحق شود و همان‌جا جان سپرد. حیوانات وحشی یک سال دور قبر آن‌ها ماندند تا اینکه مردم استخوان‌های مجنون را پیدا کردند و او را کنار لیلی به خاک سپردند.",
     descriptionEn: "Majnun lays his head on Layla's grave, prays to join her, and dies there. Wild animals guard their tomb for a year until people find his bones and bury him beside Layla — together forever.",
-    spotifyId: "1qsCumnY2xbUcOw1kaOPz6",
+    spotifyId: "2o8viI8OPMCiJL3X300vH3",
     date: "2020-07-17",
   },
 ];
