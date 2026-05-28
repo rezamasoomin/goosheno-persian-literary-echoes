@@ -8,6 +8,7 @@ import About from "./components/About";
 import ListenOn from "./components/ListenOn";
 import Comments from "./components/Comments";
 import LaylaPage from "./pages/LaylaPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 function LaylaCard() {
   const { t } = useLang();
@@ -72,7 +73,7 @@ function HomePage() {
       <About />
       <ListenOn />
       <footer className="bg-[#080808] border-t border-amber-900/30 py-8 text-center text-amber-100/30 text-sm">
-        © 2024 Goosheno · گوشنو
+        © 2020 Goosheno · گوشنو
       </footer>
     </div>
   );
@@ -81,6 +82,7 @@ function HomePage() {
 export default function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop /> 
       <LanguageProvider>
         <Routes>
           <Route path="/" element={<HomePage />} />

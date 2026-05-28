@@ -265,34 +265,39 @@ export default function LaylaPage() {
           </section>
 
           {/* ── Bottom CTA ── */}
-          <div className="border border-amber-600/30 bg-amber-600/10 rounded-2xl p-8 text-center">
-            <p className="text-amber-400 text-xs uppercase tracking-widest mb-3">
-              {t("Listen to the Podcast", "پادکست را بشنو")}
-            </p>
-            <p className="text-amber-200 text-lg font-semibold mb-2">
-              {t("Goosheno – Persian Literary Podcast", "گوشنو – پادکست ادبی فارسی")}
-            </p>
-            <p className="text-amber-100/50 text-sm mb-6">
-              {t(
-                "Hear the full story of Layla and Majnun retold in simple, accessible Persian.",
-                "داستان کامل لیلی و مجنون را به زبانی ساده و روان بشنوید."
-              )}
-            </p>
-            <div className="flex items-center justify-center gap-3 flex-wrap">
-              <button
-                onClick={() => navigate("/")}
-                className="px-6 py-2.5 rounded-full border border-amber-600/50 text-amber-400 hover:bg-amber-600/20 transition-colors text-sm"
-              >
-                {t("Browse Episodes", "مشاهده قسمت‌ها")}
-              </button>
-              <button
-                onClick={handleShare}
-                className="px-6 py-2.5 rounded-full bg-amber-600/20 border border-amber-600/50 text-amber-400 hover:bg-amber-600/30 transition-colors text-sm"
-              >
-                {t("Share This Page", "اشتراک‌گذاری این صفحه")}
-              </button>
-            </div>
-          </div>
+<div className="border border-amber-600/30 bg-amber-600/10 rounded-2xl p-8 text-center">
+  <p className="text-amber-400 text-xs uppercase tracking-widest mb-3">
+    {t("Listen to the Podcast", "پادکست را بشنو")}
+  </p>
+  <p className="text-amber-200 text-lg font-semibold mb-2">
+    {t("Goosheno – Persian Literary Podcast", "گوشنو – پادکست ادبی فارسی")}
+  </p>
+  <p className="text-amber-100/50 text-sm mb-6">
+    {t(
+      "Hear the full story of Layla and Majnun retold in simple, accessible Persian.",
+      "داستان کامل لیلی و مجنون را به زبانی ساده و روان بشنوید."
+    )}
+  </p>
+  <div className="flex items-center justify-center gap-3 flex-wrap">
+    <button
+      onClick={() => {
+        navigate("/");
+        setTimeout(() => {
+          document.querySelector("#episodes")?.scrollIntoView({ behavior: "smooth" });
+        }, 300);
+      }}
+      className="px-6 py-2.5 rounded-full bg-amber-600/20 border border-amber-600/50 text-amber-400 hover:bg-amber-600/30 transition-colors text-sm"
+    >
+      {t("Browse Episodes ↓", "مشاهده قسمت‌ها ↓")}
+    </button>
+    <button
+      onClick={handleShare}
+      className="px-6 py-2.5 rounded-full border border-amber-600/50 text-amber-400 hover:bg-amber-600/20 transition-colors text-sm"
+    >
+      {t("Share This Page", "اشتراک‌گذاری این صفحه")}
+    </button>
+  </div>
+</div>
         </div>
 
         {/* ── Footer ── */}
